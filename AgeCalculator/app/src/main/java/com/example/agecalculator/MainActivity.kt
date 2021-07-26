@@ -35,8 +35,6 @@ class MainActivity : AppCompatActivity() {
             DatePickerDialog(this,
                     DatePickerDialog.OnDateSetListener { view, selectedYear, selectedMonth, selectedDayOfMonth ->
 
-                        Toast.makeText(this@MainActivity, "$selectedDayOfMonth/$selectedMonth/$selectedYear", Toast.LENGTH_SHORT).show()
-
                         val selectedDate = "$selectedDayOfMonth/${selectedMonth + 1}/$selectedYear"
                         binding.selectedDate.text = if (selectedMonth + 1 > 9) {
                             if (selectedDayOfMonth>9){
